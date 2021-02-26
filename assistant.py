@@ -23,8 +23,8 @@ def listen_command():
             voice = listner.listen(source)
             command = listner.recognize_google(voice)
             command = command.lower()
-            if 'assistant' in command:
-                command = command.replace("assistant","")
+            if 'jarvis' in command:
+                command = command.replace("jarvis","")
                 print(command)
 
     except sr.UnknownValueError:
