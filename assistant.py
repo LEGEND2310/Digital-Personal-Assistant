@@ -9,7 +9,7 @@ import webbrowser as wb
 listner = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[0].id)
 
 def talk(text):
     engine.say(text)
@@ -56,7 +56,7 @@ def run_alexa():
         talk(pyjokes.get_joke())
 
     elif command == "":
-        talk("Pleae use my name while telling me what to do.")
+        talk("Please use my name while telling me what to do.")
 
     elif "stop" in command or "end" in command:
         talk("I am shutting down, thank you for using me.")
